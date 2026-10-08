@@ -36,7 +36,7 @@ export function Hero() {
 
           <p className="mt-5 max-w-lg text-base leading-relaxed text-chocolate-600 sm:text-lg">
             Thin-sliced, spiced dried beef with a sweet honey glaze and a slow pepper burn. Order
-            straight on WhatsApp.
+            straight on WhatsApp. No dulling!
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">

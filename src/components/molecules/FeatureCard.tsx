@@ -13,15 +13,17 @@ export function FeatureCard({ icon, title, children, className }: FeatureCardPro
   return (
     <article
       className={cn(
-        'group rounded-[1.75rem] border border-champagne-200/70 bg-gradient-to-b from-champagne-50 to-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-champagne-300 hover:shadow-card',
+        'group flex flex-row gap-4 rounded-[1.75rem] border border-champagne-200/70 bg-gradient-to-b from-champagne-50 to-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-champagne-300 hover:shadow-card sm:flex-col sm:gap-5 sm:p-7',
         className,
       )}
     >
-      <span className="grid h-12 w-12 place-items-center rounded-2xl bg-chocolate-900 text-champagne-300 transition-colors duration-300 group-hover:text-champagne-400">
+      <span className="mt-1 grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-chocolate-900 text-champagne-300 transition-colors duration-300 group-hover:text-champagne-400 sm:h-12 sm:w-12 sm:rounded-2xl">
         {icon}
       </span>
-      <h3 className="mt-5 font-display text-xl font-semibold tracking-tight text-chocolate-950">{title}</h3>
-      <p className="mt-2 text-[15px] leading-relaxed text-chocolate-600">{children}</p>
+      <div className="flex-1">
+        <h3 className="font-display text-lg font-semibold tracking-tight text-chocolate-950 sm:text-xl">{title}</h3>
+        <p className="mt-1 text-[14px] leading-relaxed text-chocolate-600 sm:mt-2 sm:text-[15px]">{children}</p>
+      </div>
     </article>
   );
 }

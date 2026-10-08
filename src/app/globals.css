@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+ * Typography
+ * ----------------------------------------------------------------------------
+ * Primary family     : Birma Sans
+ * Complementary      : Fraunces (display serif) + Hanken Grotesk (UI fallback)
+ *
+ * Birma Sans is a desktop font that is not distributed through a web-font CDN.
+ * To use it: drop the .woff2 files into /public/fonts and uncomment the
+ * @font-face block below. Until then, Hanken Grotesk (loaded via next/font)
+ * stands in — it shares Birma Sans' clean, modern grotesque proportions.
+ * ------------------------------------------------------------------------- */
+/*
+@font-face {
+  font-family: 'Birma Sans';
+  src: url('/fonts/BirmaSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Birma Sans';
+  src: url('/fonts/BirmaSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Birma Sans';
+  src: url('/fonts/BirmaSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Birma Sans';
+  src: url('/fonts/BirmaSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-white text-chocolate-900 antialiased;
+  }
+
+  ::selection {
+    @apply bg-champagne-300 text-chocolate-950;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-champagne-500 ring-offset-2;
+  }
+}
+
+@layer components {
+  /* Small overline used above section headings */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-chocolate-500;
+  }
+}
+
+@layer utilities {
+  /* Gold-foil text treatment for display headings (contrast-safe on white) */
+  .text-foil {
+    @apply bg-gradient-to-r from-champagne-600 via-champagne-700 to-chocolate-800 bg-clip-text text-transparent;
+  }
+
+  /* Inverse foil for chocolate backgrounds */
+  .text-foil-inverse {
+    @apply bg-gradient-to-r from-champagne-300 via-champagne-400 to-champagne-500 bg-clip-text text-transparent;
+  }
+}

@@ -40,9 +40,7 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <ButtonLink href="#order" variant="primary" size="lg" className="sm:min-w-44">
-              Place an order
-            </ButtonLink>
+            
             <ButtonLink
               href={chatHref}
               variant="secondary"

@@ -43,12 +43,12 @@ export function Hero() {
             
             <ButtonLink
               href={chatHref}
-              variant="secondary"
+              variant="primary"
               size="lg"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <WhatsAppIcon className="h-[18px] w-[18px] text-chocolate-700" />
+              <WhatsAppIcon className="h-[18px] w-[18px] text-white" />
               Message us on WhatsApp
             </ButtonLink>
           </div>

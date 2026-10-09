@@ -1,8 +1,8 @@
+import Image from 'next/image';
 import { ButtonLink } from '@/components/atoms/Button';
 import { Container } from '@/components/atoms/Container';
 import { SectionHeading } from '@/components/atoms/SectionHeading';
 import { CheckIcon } from '@/components/atoms/icons';
-import { KilishiPackStack } from '@/components/molecules/KilishiPackArt';
 import { wholesale } from '@/config/catalog';
 import { wholesaleHref } from '@/lib/whatsapp';
 
@@ -74,7 +74,15 @@ export function WholesaleSection() {
             aria-hidden="true"
             className="absolute inset-x-6 inset-y-8 rounded-[3rem] bg-gradient-to-b from-champagne-500/15 to-champagne-600/5 blur-sm"
           />
-          <KilishiPackStack className="relative" />
+          <div className="relative aspect-[4/4.5] animate-float-slow">
+            <Image
+              src="/Wholesalesiteimage.jpeg"
+              alt="Yagi Burn kilishi wholesale pack"
+              fill
+              sizes="(max-width: 1024px) 90vw, 50vw"
+              className="relative mx-auto h-full w-full rounded-[2rem] object-contain drop-shadow-2xl"
+            />
+          </div>
         </div>
       </Container>
     </section>
